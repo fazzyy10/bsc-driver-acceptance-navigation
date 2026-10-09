@@ -17,11 +17,15 @@ def fabricate(n: int = 500, seed: int = 2026):
 def ols_in_sample(X, y) -> dict:
     """Fit least-squares with an intercept and return in-sample R²."""
     X, y = np.asarray(X, dtype=float), np.asarray(y, dtype=float)
-    if X.ndim != 2 or y.ndim != 1 or X.shape[0] != y.shape[0]:
-        raise ValueError("Mismatched predictor/outcome dimensions")
+    if X.ndim != 2 or y.ndim != 1 or X.shape[0] != y.shape[0] or X.shape[0] <= X.shape[1] + 1:
+        raise ValueError("Need matched arrays with more observations than coefficients")
+    if not np.isfinite(X).all() or not np.isfinite(y).all():
+        raise ValueError("Only finite numbers are accepted")
     if not (np.isfinite(X).all() and np.isfinite(y).all()):
         raise ValueError("Only finite inputs allowed")
     design = np.column_stack([np.ones(len(X)), X])
+    if np.linalg.matrix_rank(design) != design.shape[1]:
+        raise ValueError("Predictor design is rank deficient")
     coef, *_ = np.linalg.lstsq(design, y, rcond=None)
     fitted = design @ coef
     ss_total = float(np.sum((y - y.mean()) ** 2))
@@ -39,6 +43,8 @@ def pearson(x, y) -> float:
     x, y = np.asarray(x, dtype=float), np.asarray(y, dtype=float)
     if x.ndim != 1 or y.ndim != 1 or len(x) != len(y) or len(x) < 3:
         raise ValueError("Expected equal-sized 1D arrays with three or more observations")
+    if not (np.isfinite(x).all() and np.isfinite(y).all()):
+        raise ValueError("Correlation requires finite observations")
     if x.std() == 0 or y.std() == 0:
         raise ValueError("Correlation undefined for a constant variable")
     return float(np.corrcoef(x, y)[0, 1])
