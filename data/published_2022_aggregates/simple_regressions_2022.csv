@@ -1,4 +1,4 @@
-construct,r,r_squared,adjusted_r_squared,f_change,p_reported
+construct,model_summary_R_unsigned,r_squared,adjusted_r_squared,f_change,p_reported
 Perceived Ease of Use,0.635,0.403,0.401,208.959,<0.001
 Perceived Usefulness,0.690,0.476,0.474,280.222,<0.001
 Perceived Locational Accuracy,0.631,0.398,0.396,204.114,<0.001
