@@ -1,4 +1,4 @@
-name: Public research reproducibility
+name: BSc research verification
 on:
   push:
     branches: [main]
@@ -8,18 +8,32 @@ on:
 permissions:
   contents: read
 jobs:
-  synthetic-research:
+  statistical-checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
-          python-version: '3.11'
+          python-version: "3.11"
           cache: pip
-      - name: Install dependencies
+      - name: Install documented research environment
         run: python -m pip install -r requirements.txt
-      - name: Run synthetic tests and source restrictions
+      - name: Check dependency consistency
+        run: python -m pip check
+      - name: Run scientific method tests and private-data guards
         run: python -m pytest -q
-      - name: Execute the public teaching example
-        run: python examples/synthetic_acceptance.py
+      - name: Run two independent, fabricated-data examples
+        run: |
+          python examples/synthetic_acceptance.py
+          python examples/synthetic_factor_diagnostics.py
+      - name: Execute complete public notebook
+        run: |
+          mkdir -p local_results
+          python -m jupyter nbconvert --to notebook --execute notebooks/overview.ipynb --output overview-executed.ipynb --output-dir local_results --ExecutePreprocessor.timeout=120
+      - name: Audit internal links and reject obvious private files
+        run: |
+          python scripts/repo_preflight.py
+      - name: Record exact resolved environment
+        run: |
+          python -m pip freeze > local_results/resolved-dependencies.txt

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 350" role="img" aria-labelledby="t d">
+<title id="t">The 2022 dissertation and later independent public demonstration</title>
+<desc id="d">A research question leads to a 2022 cross-sectional questionnaire, SPSS analysis and reported aggregates. A separate 2026 synthetic-data code branch demonstrates statistical methods but is not original-data replication.</desc>
+<rect width="960" height="350" rx="10" fill="#f8faf9"/>
+<text x="28" y="40" font-size="25" font-weight="700" fill="#183746">One research question. Two different evidence layers.</text>
+<text x="29" y="70" font-size="16" fill="#4a5f6a">What shaped acceptance of mobile navigation among drivers surveyed in Sri Lanka?</text>
+<rect x="28" y="105" width="428" height="64" rx="8" fill="#dce9ef" stroke="#567c8e"/>
+<text x="45" y="130" font-size="18" font-weight="700" fill="#183746">2022 assessed dissertation</text>
+<text x="45" y="153" font-size="14" fill="#234355">Questionnaire · 311 analysed cases</text>
+<rect x="28" y="191" width="428" height="91" rx="8" fill="#e9f0f3" stroke="#7195a5"/>
+<text x="45" y="216" font-size="16" font-weight="700" fill="#234355">SPSS findings</text>
+<text x="45" y="238" font-size="14" fill="#234355">Reliability, PCA, correlations, regression</text>
+<text x="45" y="260" font-size="14" fill="#234355">Public: historic aggregate tables only</text>
+<path d="M242 169 v22" fill="none" stroke="#567c8e" stroke-width="2"/>
+<rect x="504" y="105" width="428" height="64" rx="8" fill="#f4eddd" stroke="#c49a4b"/>
+<text x="521" y="130" font-size="18" font-weight="700" fill="#584525">2026 independent public example</text>
+<text x="521" y="153" font-size="14" fill="#584525">Entirely fabricated observations</text>
+<rect x="504" y="191" width="428" height="91" rx="8" fill="#f9f3e5" stroke="#c9ac71"/>
+<text x="521" y="216" font-size="16" font-weight="700" fill="#584525">Executable methods and tests</text>
+<text x="521" y="238" font-size="14" fill="#584525">OLS, alpha, PCA/KMO/Bartlett, notebook</text>
+<text x="521" y="260" font-size="14" fill="#584525">NOT a reproduction of 2022 private records</text>
+<path d="M718 169 v22" fill="none" stroke="#c49a4b" stroke-width="2"/>
+<text x="29" y="320" font-size="15" fill="#435a65">No respondent-level data, no claimed reduction in road accidents, no peer-reviewed publication.</text>
+</svg>
