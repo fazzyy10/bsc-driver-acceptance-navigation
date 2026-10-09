@@ -6,3 +6,12 @@ authors:
     given-names: Mohamed Fawaz Hussain
 url: "https://github.com/fazzyy10/bsc-driver-acceptance-navigation"
 type: other
+preferred-citation:
+  type: thesis
+  title: "An Explorative Study on Driver Acceptance of Mobile Navigation Systems to Mitigate Road Accidents in Sri Lanka"
+  year: 2022
+  authors:
+    - family-names: Fareed
+      given-names: Mohamed Fawaz Hussain
+  institution:
+    name: Cardiff Metropolitan University
