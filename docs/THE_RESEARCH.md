@@ -4,9 +4,7 @@ The starting point was the gap between having a mobile navigation system availab
 
 For a driver, receiving the right information at the right moment can be valuable. On the other hand, a slow or inaccurate system may create frustration rather than confidence. It is also possible for an application to provide useful information but still be difficult to follow while driving. I wanted to understand these different perceptions in the Sri Lankan context.
 
-My main research question in 2022 was:
-
-> What are the significant factors which contribute to driver acceptance of mobile navigation systems in Sri Lanka?
+The main question in the dissertation concerned **which factors significantly affect driver acceptance of mobile navigation systems in Sri Lanka**.
 
 The research examined **acceptance**. Improving road safety was the practical motivation for the topic, but I did not collect collision records or run a driving experiment.
 
