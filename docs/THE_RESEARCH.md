@@ -1,33 +1,41 @@
-# The research
+# Why I studied driver acceptance
 
-## Why this question?
+The starting point was the gap between having a mobile navigation system available and actually wanting to use it.
 
-In 2022 I was interested in why drivers in Sri Lanka would accept mobile navigation systems. It seemed too simple to say that a map is useful, therefore people will use it. How somebody experiences a system, whether they trust it, and how much attention it takes to use all mattered to the question.
+For a driver, receiving the right information at the right moment can be valuable. On the other hand, a slow or inaccurate system may create frustration rather than confidence. It is also possible for an application to provide useful information but still be difficult to follow while driving. I wanted to understand these different perceptions in the Sri Lankan context.
 
-The assessed project used ideas from technology-acceptance research to investigate **driver acceptance**, not measured road accidents.
+My main research question in 2022 was:
 
-## The nine possible explanations
+> What are the significant factors which contribute to driver acceptance of mobile navigation systems in Sri Lanka?
 
-| Explanatory construct | Question behind the construct |
+The research examined **acceptance**. Improving road safety was the practical motivation for the topic, but I did not collect collision records or run a driving experiment.
+
+## From literature to measures
+
+I built the conceptual framework around nine explanatory constructs.
+
+| Construct | What I wanted to understand |
 |---|---|
-| Perceived ease of use | Does the system feel straightforward to use? |
-| Perceived usefulness | Does it seem helpful for the journey? |
-| Perceived locational accuracy | Does location information appear reliable? |
-| Perceived processing speed | Does the system seem responsive? |
-| Service and display quality | How does information presentation affect use? |
-| Distraction perception | Does using it seem to distract the driver? |
-| Satisfaction | How satisfied is the driver with the experience? |
-| Social influence | Do other people's views or use matter? |
-| Trust | Does the driver believe the system's information? |
+| Perceived ease of use | Whether the system felt straightforward |
+| Perceived usefulness | Whether drivers expected it to assist their journeys |
+| Perceived locational accuracy | Confidence in the accuracy of location information |
+| Perceived processing speed | Whether information was delivered responsively |
+| Service and display quality | How drivers judged the presentation and service |
+| Distraction perception | Concerns about attention while driving |
+| Satisfaction | How drivers felt about their experience |
+| Social influence | Whether others affected their willingness to use it |
+| Trust | Confidence in the system and its information |
 
-These are explanatory descriptions of the research constructs, **not verbatim questionnaire items**. The dependent variable was Driver Acceptance.
+These are explanations of the original constructs, not a replacement for the questionnaire wording. **Driver acceptance** was the outcome measure.
 
-## How the original study worked
+I used a cross-sectional questionnaire with five-point Likert-style responses. In **IBM SPSS**, I checked internal consistency with Cronbach's alpha, examined PCA-based exploratory structure together with KMO and Bartlett tests, then studied Pearson correlations and regression models. The final simultaneous regression considered all nine explanatory constructs.
 
-The original cross-sectional questionnaire used five-point Likert-style responses. IBM SPSS was used for scale reliability (Cronbach's alpha), principal-component-based exploratory checks (KMO and Bartlett), descriptive statistics, Pearson correlations, one-predictor regressions and **one nine-predictor simultaneous OLS regression**.
+The published statistical analysis used **311 responses**. The dissertation contains differing initial return totals of 325 and 326. The exact earlier processing history has not been fully reconciled, so I keep that uncertainty visible in the [evidence record](EVIDENCE_AND_LIMITATIONS.md).
 
-The published analyses used **N = 311**. The assessed document has conflicting initial collection totals (325 and 326); see [evidence and limitations](EVIDENCE_AND_LIMITATIONS.md). It would not be responsible to invent a missing processing step to close the gap.
+## Why I used more than one type of analysis
 
-No driving experiment was conducted. The data consisted of reported perceptions, not crashes or measured route performance.
+The individual correlations helped identify which perceptions moved together with driver acceptance. The multiple regression asked a narrower question: what relationship remained for a factor after accounting for the other eight factors included in the model?
 
-[See what the numbers support](RESULTS_2022.md).
+That distinction is central to the [results](RESULTS_2022.md). It also explains why I would be cautious about making practical recommendations from a correlation table alone.
+
+For the questionnaire measures and statistical interpretation, see [how I analysed the study](MEASURES_AND_METHODS.md).
