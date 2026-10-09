@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+local_data/
+local_results/
+source_private/
+private/
+*.sav
+*.spv
+*.sps
+*.xlsx
+*.xls
+.env
