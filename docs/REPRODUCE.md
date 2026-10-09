@@ -9,6 +9,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q
 python examples/synthetic_acceptance.py
 python examples/synthetic_factor_diagnostics.py
+python -c "from pathlib import Path; Path('local_results').mkdir(exist_ok=True)"
 python -m jupyter nbconvert --execute --to notebook notebooks/overview.ipynb --output overview-executed.ipynb --output-dir local_results
 python scripts/repo_preflight.py
 ```

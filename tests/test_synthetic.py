@@ -74,3 +74,29 @@ def test_private_source_files_never_checked_in():
     restricted={".sav",".spv",".sps",".xlsx",".xls",".docx",".pdf",".zip",".sqlite"}
     forbidden = [str(p) for p in ROOT.rglob("*") if p.is_file() and p.suffix.lower() in restricted and ".git" not in p.parts]
     assert forbidden == []
+
+
+def test_ols_rejects_rank_deficient_predictors():
+    X = np.ones((30, 2))
+    with pytest.raises(ValueError, match="rank deficient"):
+        ols_in_sample(X, np.arange(30.0))
+
+
+def test_ols_rejects_nonfinite_inputs():
+    X, y = fabricate(40)
+    X[2, 0] = np.inf
+    with pytest.raises(ValueError, match="finite"):
+        ols_in_sample(X, y)
+
+
+def test_pearson_rejects_nonfinite_inputs():
+    a = np.arange(10.0)
+    a[1] = np.nan
+    with pytest.raises(ValueError, match="finite"):
+        pearson(a, np.arange(10.0))
+
+
+def test_ols_rejects_too_few_observations():
+    X = np.arange(20.0).reshape(4, 5)
+    with pytest.raises(ValueError):
+        ols_in_sample(X, np.arange(4.0))
