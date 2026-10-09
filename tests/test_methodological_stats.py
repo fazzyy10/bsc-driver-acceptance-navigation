@@ -85,3 +85,21 @@ def test_historical_threshold_not_rediscovered():
     assert float(rows["Perceived Usefulness"]["p_reported"])>.01
     assert rows["Satisfaction"]["p_reported"]=="<0.001"
     assert rows["Trust"]["p_reported"]=="<0.001"
+
+
+
+def test_public_reproduction_guide_uses_existing_preflight_script():
+    """A reader copying the checklist must not hit a nonexistent command."""
+    checklist=(ROOT/"docs/REPRODUCIBILITY_CHECKLIST.md").read_text(encoding="utf-8")
+    guide=(ROOT/"docs/REPRODUCE.md").read_text(encoding="utf-8")
+    assert (ROOT/"scripts/repo_preflight.py").exists()
+    assert "python scripts/repo_preflight.py" in checklist
+    assert "python scripts/repo_preflight.py" in guide
+    assert "privacy_preflight.py" not in checklist
+
+
+def test_notebook_command_creates_output_directory():
+    for name in ("REPRODUCE.md", "REPRODUCIBILITY_CHECKLIST.md"):
+        text=(ROOT/"docs"/name).read_text(encoding="utf-8")
+        assert "Path('local_results').mkdir(exist_ok=True)" in text
+        assert "notebooks/overview.ipynb" in text
