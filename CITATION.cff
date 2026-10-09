@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite the original 2022 dissertation for the historical findings."
+title: "Driver Acceptance of Mobile Navigation Systems in Sri Lanka"
+authors:
+  - family-names: Fareed
+    given-names: Mohamed Fawaz Hussain
+url: "https://github.com/fazzyy10/bsc-driver-acceptance-navigation"
+type: other
