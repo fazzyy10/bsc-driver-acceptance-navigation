@@ -1,72 +1,61 @@
-# What makes a driver trust a navigation system?
+# Driver acceptance of mobile navigation systems in Sri Lanka
 
-**Driver acceptance of mobile navigation systems in Sri Lanka**  
-BSc (Hons) Business Information Systems · Cardiff Metropolitan University · 2022  
-**Mohamed Fawaz Hussain Fareed**
+**My BSc research at Cardiff Metropolitan University, 2022**  
+Mohamed Fawaz Hussain Fareed · Business Information Systems (First Class)
 
-A navigation app can show us where to go, warn us about congestion and help us make decisions on unfamiliar roads. But that does not necessarily mean someone will trust it, find it useful, or actually use it.
+I chose this subject because navigation had become something drivers could access quite easily through their phones. There were obvious advantages: knowing the route, understanding traffic conditions, and receiving information before reaching an unfamiliar area. But I did not think the availability of a system, by itself, explained whether a driver would accept it.
 
-This question interested me when I began my undergraduate dissertation: **what makes drivers in Sri Lanka accept mobile navigation systems in the first place?** Rather than assume that available technology would automatically be adopted, I set out to examine how drivers perceived it.
+In Sri Lanka, where traffic conditions and the information available to drivers can vary, I wanted to find out which parts of the experience mattered. Was it accuracy? The speed and quality of the information? Trust? Or how distracting the system felt while driving?
 
-The original assessed dissertation, submitted on **12 June 2022**, was titled *An Explorative Study on Driver Acceptance of Mobile Navigation Systems to Mitigate Road Accidents in Sri Lanka*.
+That became the central question of my dissertation, *An Explorative Study on Driver Acceptance of Mobile Navigation Systems to Mitigate Road Accidents in Sri Lanka*, submitted on **12 June 2022**.
 
-[The research](docs/THE_RESEARCH.md) · [Findings](docs/RESULTS_2022.md) · [Try the code](docs/REPRODUCE.md) · [Limitations](docs/EVIDENCE_AND_LIMITATIONS.md)
+[How I approached the research](docs/THE_RESEARCH.md) · [My original findings](docs/RESULTS_2022.md) · [Explore the notebook](notebooks/overview.ipynb) · [Run the Python examples](docs/REPRODUCE.md)
 
-![Historical correlations with driver acceptance](docs/figures/acceptance_correlations.svg)
+![The nine Pearson correlations with driver acceptance reported in the 2022 dissertation](docs/figures/acceptance_correlations.svg)
 
-## What I studied
+## Working through the evidence
 
-The study tested nine possible explanations of driver acceptance: **ease of use, usefulness, locational accuracy, processing speed, service and display quality, distraction perception, satisfaction, social influence and trust**. I used a questionnaire and IBM SPSS, including reliability checks, principal-component-based exploratory analysis, correlations, and simple and multiple regression.
+I studied nine possible influences on driver acceptance: perceived ease of use, usefulness, locational accuracy, processing speed, service and display quality, distraction perception, satisfaction, social influence and trust.
 
-The published statistical analyses used **311 responses**.
+The research was quantitative. I used questionnaire responses and **IBM SPSS** to check the measures, examine the individual relationships with driver acceptance and build a multiple regression model. The final statistical analysis contained **311 responses**.
 
-## The research, as two distinct pieces of work
+One result stood out to me when reading the models together. **Satisfaction (r = .767)** and **trust (r = .731)** had the strongest positive correlations with acceptance. They were also the two factors that met the study's **1% significance threshold** in the model containing all nine predictors.
 
-![The original BSc analysis and the separate public reproducibility example](docs/figures/research_workflow.svg)
+Perceived usefulness had a p-value of **.011** in that model. It is very close to .01, but it is still above the threshold I used. That is an important difference between the individual correlations and the regression results.
 
-The **2022 dissertation** used real questionnaire answers and IBM SPSS. The source notes and [aggregate research tables](data/published_2022_aggregates/) describe what I reported then. The **2026 Python demonstration** was written afterwards and uses fabricated answers. Both are useful for different reasons, but I do not present one as the other.
+The model reported **R² = .679**. It accounts for variation in the acceptance scores of the analysed respondents. It was never a measurement of how many road accidents were prevented, and the study did not observe actual driving incidents.
 
-## What I learnt from the numbers
+[Read the figures as they appeared in the original dissertation](docs/RESULTS_2022.md) · [See the published aggregate tables](data/published_2022_aggregates/)
 
-There is an important difference between a factor correlating with acceptance *on its own* and retaining a relationship when other factors are considered together.
+## Looking at my earlier work again
 
-In the original pairwise results, **satisfaction (r = .767)** and **trust (r = .731)** were the strongest positive associations. Both were also significant in the simultaneous nine-predictor regression at the study's chosen **1% threshold**. Perceived usefulness reported p = .011, which is close, but *not* below .01.
+Revisiting the analysis has been useful because I would now challenge some of the decisions more carefully.
 
-The full model reported **R² = .679**. That is the proportion of variation explained **within the analysed sample**. It does not mean the model predicted 67.9% of accidents, and it does not prove that navigation software prevented crashes.
+For instance, a high Cronbach's alpha can tell me the items within a scale are consistent, but it cannot establish by itself that they capture exactly the construct I intended. The **KMO value of .500** for a two-item scale is another example. In that particular mathematical setting the value is fixed by the formula; it should not be interpreted as independent validation.
 
-These are the **historical 2022 results**, not numbers generated by the Python example here. [Inspect the reported values](docs/RESULTS_2022.md).
+I would also want to investigate whether trust and satisfaction are sufficiently distinct, whether drivers in other parts of the country would respond similarly, and whether acceptance leads to actual use. Connecting that use to road safety would require an entirely different set of observations.
 
-There is also something I would be more careful about when discussing the original questionnaire. Some reliability and exploratory structure measures looked strong, but a two-item scale's **KMO of .500** is not positive evidence of validity: for two nonsingular correlated items, it follows from the formula. Good research means recognising what a statistic can tell you and what it cannot.
+I have written those questions down in [what I would investigate next](docs/WHAT_I_WOULD_TEST_NEXT.md). They are areas for further work, not findings I am claiming to have already established.
 
-## What I would question now
+![The assessed 2022 analysis and the separate later public research examples](docs/figures/research_workflow.svg)
 
-Who was represented in the survey, and who was not? Would trust and satisfaction remain distinct if we collected more evidence? Would the pattern hold in another city or among drivers with different experience? And perhaps most importantly: does acceptance translate into actual use, and does actual use change driving behaviour?
+## What you can inspect
 
-I think those are the questions worth carrying forward. A convincing research project should make the limits of its own findings visible, not bury them.
-
-## Read and test the work
-
-| Section | What you will find |
+| Material | What it contains |
 |---|---|
-| [Research decisions](docs/THE_RESEARCH.md) | The purpose, nine constructs and 2022 SPSS analysis |
-| [Research method and measurement](docs/MEASURES_AND_METHODS.md) | Likert scale, original SPSS steps, model definitions and why the limits matter |
-| [Statistical evidence](docs/RESULTS_2022.md) | Original reported correlations, regression and interpretation |
-| [Historical research tables](data/published_2022_aggregates/) | 2022 reliability, PCA/KMO, simple and multiple regression summaries |
-| [Reproducibility example](docs/REPRODUCE.md) | A **fabricated-data** Python demonstration and tests, not original respondents |
-| [Executed notebook and factor diagnostics](notebooks/overview.ipynb) | Original aggregate table visualisation next to separately labelled synthetic tests |
-| [Reproducibility checklist](docs/REPRODUCIBILITY_CHECKLIST.md) | Exact public verification scope and limitations |
-| [Evidence and limitations](docs/EVIDENCE_AND_LIMITATIONS.md) | What has been verified, what remains uncertain and what is private |
-| [Further research](docs/WHAT_I_WOULD_TEST_NEXT.md) | What would be needed to make a stronger claim |
+| [Research design](docs/THE_RESEARCH.md) and [measures](docs/MEASURES_AND_METHODS.md) | The questionnaire constructs and original SPSS approach |
+| [Results](docs/RESULTS_2022.md) | Correlations, regression and the interpretation of the reported coefficients |
+| [Public data tables](data/published_2022_aggregates/) | Aggregate reliability, exploratory structure and regression figures reported in 2022 |
+| [Jupyter notebook](notebooks/overview.ipynb) | Historical aggregate charts followed by clearly identified synthetic examples |
+| [Python demonstration](docs/REPRODUCE.md) | Runnable statistical calculations using fabricated data, with tests |
+| [Reproducibility checklist](docs/REPRODUCIBILITY_CHECKLIST.md) | What another researcher can verify from the public files |
+| [Data and disclosure](data/DATASET_CARD.md) | Data scope, privacy and reuse restrictions |
 
-The [dataset and disclosure card](data/DATASET_CARD.md) and [citation and permissions note](docs/CITATION_AND_PERMISSIONS.md) explain what has actually been released.
+**A note on the two periods of work:** the dissertation and its SPSS findings belong to **2022**. The Python code and further methodological examination were developed **after the degree**. The Python examples use fabricated observations; they do not reproduce the original respondent-level analysis. Original survey records, SPSS files and the unredacted dissertation remain private pending appropriate release review. The assessed document also contains differing initial response totals (325 and 326), which I have [recorded without inventing a reconciliation](docs/EVIDENCE_AND_LIMITATIONS.md).
 
-The original assessed dissertation and respondent-level SPSS files are preserved **privately**. They are not published in this repository. New analysis of restricted source records remains under separate release review. The public code uses fabricated inputs and must not be mistaken for reproduction of the 2022 SPSS results.
-
-**Related work:** [My MSc Data Science research on solar-flare classification and validation](https://github.com/fazzyy10/solar-flare-ml-class-imbalance).
+For my subsequent work in machine learning, see [my MSc solar-flare classification research](https://github.com/fazzyy10/solar-flare-ml-class-imbalance).
 
 ---
 
 *Mohamed Fawaz Hussain Fareed · Cardiff, United Kingdom*  
-*BSc (Hons) Business Information Systems (First Class) · MSc Data Science (Distinction)*
-
-This work did not measure road accidents. I would rather show clearly what the evidence establishes than make the result appear stronger than it is.
+[Original study citation and permissions](docs/CITATION_AND_PERMISSIONS.md)
