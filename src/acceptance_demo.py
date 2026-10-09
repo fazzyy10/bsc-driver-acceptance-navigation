@@ -15,28 +15,15 @@ def fabricate(n: int = 500, seed: int = 2026):
 
 
 def ols_in_sample(X, y) -> dict:
-    """Fit least-squares with an intercept and return in-sample R²."""
-    X, y = np.asarray(X, dtype=float), np.asarray(y, dtype=float)
-    if X.ndim != 2 or y.ndim != 1 or X.shape[0] != y.shape[0] or X.shape[0] <= X.shape[1] + 1:
-        raise ValueError("Need matched arrays with more observations than coefficients")
-    if not np.isfinite(X).all() or not np.isfinite(y).all():
-        raise ValueError("Only finite numbers are accepted")
-    if not (np.isfinite(X).all() and np.isfinite(y).all()):
-        raise ValueError("Only finite inputs allowed")
-    design = np.column_stack([np.ones(len(X)), X])
-    if np.linalg.matrix_rank(design) != design.shape[1]:
-        raise ValueError("Predictor design is rank deficient")
-    coef, *_ = np.linalg.lstsq(design, y, rcond=None)
-    fitted = design @ coef
-    ss_total = float(np.sum((y - y.mean()) ** 2))
-    if ss_total <= 0:
-        raise ValueError("R² undefined for a constant outcome")
+    """Expose the shared, checked regression implementation for the teaching example."""
+    from bsc_public.stats import ols
+    fitted = ols(X, y)
+    coefficients = np.asarray(fitted["coefficients"], dtype=float)
     return {
-        "intercept": float(coef[0]),
-        "coefficients": coef[1:],
-        "r_squared_in_sample": float(1 - np.sum((y - fitted) ** 2) / ss_total),
+        "intercept": float(coefficients[0]),
+        "coefficients": coefficients[1:],
+        "r_squared_in_sample": fitted["r_squared_in_sample"],
     }
-
 
 def pearson(x, y) -> float:
     """Compute sample Pearson r, without a significance test."""
