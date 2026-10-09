@@ -16,6 +16,8 @@ I used **IBM SPSS**, not Python, for the original 2022 assessment. The published
 
 The later Python files illustrate these calculations on invented data. They were not used to obtain the original submitted result.
 
+A small but important reading detail: the single-predictor SPSS regression table reports **model-summary R**, a non-negative quantity. For distraction perception, that is +.279 even though the **signed Pearson correlation is −.279**. The tables preserve both values with different names. They are not contradictory.
+
 ## How I now interpret those choices
 
 A high alpha is a measure of internal consistency, not evidence that the construct is valid in every population. PCA variance explained is not the same as fitting or validating a confirmatory factor model. A two-item scale's overall KMO is mathematically **0.500** whenever the item correlation matrix is nonsingular. That value should not be advertised as independent evidence of strong sampling adequacy.
