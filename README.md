@@ -9,7 +9,7 @@ In Sri Lanka, where traffic conditions and the information available to drivers 
 
 That became the central question of my dissertation, *An Explorative Study on Driver Acceptance of Mobile Navigation Systems to Mitigate Road Accidents in Sri Lanka*, submitted on **12 June 2022**.
 
-[How I approached the research](docs/THE_RESEARCH.md) · [My original findings](docs/RESULTS_2022.md) · [Explore the notebook](notebooks/overview.ipynb) · [Run the Python examples](docs/REPRODUCE.md)
+[Read the redacted 2022 dissertation](submitted_bsc_record/THESIS_PUBLIC_READING_COPY.md) · [How I approached the research](docs/THE_RESEARCH.md) · [My original findings](docs/RESULTS_2022.md) · [Explore the notebook](notebooks/overview.ipynb) · [Run the Python examples](docs/REPRODUCE.md)
 
 ![The nine Pearson correlations with driver acceptance reported in the 2022 dissertation](docs/figures/acceptance_correlations.svg)
 

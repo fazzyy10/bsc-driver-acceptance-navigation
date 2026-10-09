@@ -4,7 +4,7 @@
 
 ## Included here
 
-The repository contains selected **aggregate values already reported in the 2022 dissertation**, concise explanatory notes and a synthetic Python demonstration. It does **not** contain original respondent records.
+The repository contains a [redacted public reading edition of the dissertation](../submitted_bsc_record/THESIS_PUBLIC_READING_COPY.md), selected **aggregate values already reported in 2022**, explanatory notes and a synthetic Python demonstration. The reading edition preserves the main body as extracted text but omits original formatting, images, the scanned reference pages and restricted appendix materials. It is **not** the unredacted original or a complete visual reproduction. It contains no released respondent-level dataset.
 
 ## Kept private
 
